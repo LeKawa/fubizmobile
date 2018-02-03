@@ -1,0 +1,85 @@
+body {
+  font-family: 'Raleway', sans-serif; }
+
+.header {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  background-color: #0c0c17;
+  display: flex;
+  -webkit-box-shadow: 0 1px 5px 0 white;
+  justify-content: space-between; }
+  .header-logo-container {
+    padding-top: 10px;
+    padding-left: 20px; }
+  .header-logo-img {
+    height: 30px;
+    width: 30px; }
+
+.burger-menu {
+  padding-right: 20px;
+  padding-top: 10px; }
+
+a {
+  cursor: pointer;
+  padding: 12px 0; }
+  a span {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 4px;
+    background: #fff;
+    transition: all 0.2s ease-in-out; }
+    a span:after, a span:before {
+      position: absolute;
+      background: #fff;
+      content: '';
+      width: 20px;
+      height: 4px;
+      transition: all 0.2s ease-in-out; }
+    a span:before {
+      top: 8px; }
+    a span:after {
+      top: 16px; }
+
+a.active span {
+  background: transparent; }
+  a.active span:before {
+    transform: rotate(45deg) translate(5px, 6px); }
+  a.active span:after {
+    transform: rotate(-45deg) translate(5px, -6px); }
+
+.title-container {
+  padding-left: 20px;
+  color: #0c0c17;
+  background-image: url("../img/background-title.jpg");
+  border-bottom: 1px solid black;
+  padding-right: 20px;
+  background-size: 100% auto; }
+  .title-container-h {
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 1000;
+    padding-top: 80px; }
+  .title-container-info {
+    margin-top: 14px;
+    justify-content: center;
+    display: flex; }
+    .title-container-info-left {
+      padding: 10px 14px 8px;
+      background-color: rgba(128, 140, 209, 0.9);
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 1px; }
+    .title-container-info-right {
+      font-size: 9px;
+      opacity: 0.8;
+      padding: 10px 14px 8px;
+      margin-left: 18px; }
+
+.article-container {
+  width: 100%;
+  display: block; }
+  .article-container-content {
+    padding: 0 20px; }
