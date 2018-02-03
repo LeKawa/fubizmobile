@@ -112,11 +112,47 @@ a.active {
     }
   }
 }
+
 .article-container {
   width: 100%;
   display: block;
-  &-content{
-    padding: 0 20px;
 
+  &-block {
+    display: flex;
+    height: 60px;
+    margin: 0 auto;
+    padding: 20px 0 20px 0;
+    justify-content: center;
+
+    &-number {
+      height: 100%;
+      width: 60px;
+      background-color: black;
+      border: 0.5px solid #e3e3e5;
+    }
+
+    &-facebook {
+      height: 100%;
+      width: 60px;
+      border: 0.5px solid #e3e3e5;
+    }
+
+    &-twitter {
+      height: 100%;
+      border: 0.5px solid #e3e3e5;
+      width: 60px;
+    }
+
+    &-last {
+      height: 100%;
+      border: 0.5px solid #e3e3e5;
+      width: 60px;
+    }
+  }
+
+  &-content {
+    font-size: 19px;
+    line-height: 130%;
+    padding: 0 20px;
   }
 }
