@@ -60,8 +60,15 @@ a.active span {
     font-size: 40px;
     line-height: 40px;
     text-align: center;
+    margin: 0 auto;
+    width: 80%;
     font-weight: 1000;
     padding-top: 80px; }
+    @media (min-width: 1024px) {
+      .title-container-h {
+        width: 30%;
+        font-size: 50px;
+        line-height: 50px; } }
   .title-container-info {
     margin-top: 14px;
     justify-content: center;
@@ -74,19 +81,29 @@ a.active span {
       letter-spacing: 1px; }
     .title-container-info-right {
       font-size: 9px;
-      opacity: 0.8;
+      opacity: 1;
       padding: 10px 14px 8px;
       margin-left: 18px; }
 
 .article-container {
   width: 100%;
   display: block; }
+  @media (min-width: 1024px) {
+    .article-container {
+      top: -10%;
+      width: 80%;
+      margin: 0 auto;
+      display: flex; } }
   .article-container-block {
     display: flex;
     height: 60px;
     margin: 0 auto;
-    padding: 20px 0 20px 0;
+    padding: 40px 0 40px 0;
     justify-content: center; }
+    @media (min-width: 1024px) {
+      .article-container-block {
+        display: block;
+        padding: 0; } }
     .article-container-block-number {
       height: 100%;
       width: 60px;

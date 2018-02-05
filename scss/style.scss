@@ -1,5 +1,20 @@
 $colorblack: #0c0c17;
 
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
 body {
   font-family: 'Raleway', sans-serif;
 }
@@ -87,8 +102,16 @@ a.active {
     font-size: 40px;
     line-height: 40px;
     text-align: center;
+    margin: 0 auto;
+    width: 80%;
     font-weight: 1000;
     padding-top: 80px;
+    @include desktop{
+      width: 30%;
+      font-size: 50px;
+
+      line-height: 50px;
+    }
   }
 
   &-info {
@@ -106,7 +129,7 @@ a.active {
 
     &-right {
       font-size: 9px;
-      opacity: 0.8;
+      opacity: 1;
       padding: 10px 14px 8px;
       margin-left: 18px;
     }
@@ -116,13 +139,23 @@ a.active {
 .article-container {
   width: 100%;
   display: block;
+  @include desktop {
+    top: -10%;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+  }
 
   &-block {
     display: flex;
     height: 60px;
     margin: 0 auto;
-    padding: 20px 0 20px 0;
+    padding: 40px 0 40px 0;
     justify-content: center;
+    @include desktop {
+    display: block;
+    padding: 0;
+    }
 
     &-number {
       height: 100%;
